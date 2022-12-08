@@ -1,4 +1,4 @@
-package Admin;
+package Page;
 
 import CustomerPackage.CustomerManagementMenu;
 import InvoicePackage.InvoiceManagementMenu;

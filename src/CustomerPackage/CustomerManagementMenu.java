@@ -171,7 +171,7 @@ public class CustomerManagementMenu {
         }
         System.out.println("Nhập mật khẩu tài khoản:");
         String password = sc.nextLine();
-        System.out.println("Nhập tên khách hàng");
+        System.out.println("Nhập họ và tên khách hàng");
         String name = sc.nextLine();
         System.out.println("Nhập số điện thoại khách hàng:");
         String phoneNumber = sc.nextLine();

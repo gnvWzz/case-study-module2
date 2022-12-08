@@ -63,7 +63,6 @@ public class InvoiceManagementMenu {
     }
 
     private void addI() {
-        int choice;
         System.out.println("Bạn chọn tạo hoá đơn mới. Nhập ID hoá đơn:");
         sc.nextLine();
         String invoiceId = sc.nextLine();
@@ -89,6 +88,7 @@ public class InvoiceManagementMenu {
         }
         Date createdInvoiceDate = new Date();
         Invoice invoice = new Invoice(createdInvoiceDate,invoiceId,customerId);
+        int choice;
         do {
             System.out.println("Nhập ID phòng khách hàng đã sử dụng:");
             System.out.println(roomManagement);
