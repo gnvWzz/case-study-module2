@@ -59,7 +59,7 @@ public class RoomManagementMenu {
     private void editRID() {
         System.out.println("Bạn chọn sửa ID phòng. Nhập ID phòng cần sửa:");
         sc.nextLine();
-        String id = sc.next();
+        String id = sc.nextLine();
         if (roomManagement.searchRoom(id) != null) {
             System.out.println("Nhập ID mới thay thế:");
             String newID = sc.nextLine();
@@ -120,10 +120,10 @@ public class RoomManagementMenu {
         System.out.println("4. Sửa ID phòng");
         System.out.println("5. Sửa giá tiền theo giờ của phòng");
         System.out.println("6. Sửa mô tả phòng");
-        System.out.println("7. Sắp xếp danh sách phòng theo giá, thứ tự tăng dần");
-        System.out.println("8. Sắp xếp danh sách phòng theo giá, thứ tự giảm dần");
-        System.out.println("9. Sắp xếp danh sách phòng theo giá, thứ tự tăng dần");
-        System.out.println("10. Sắp xếp danh sách phòng theo giá, thứ tự giảm dần");
+        System.out.println("7. Sắp xếp danh sách phòng theo giá phòng, thứ tự tăng dần");
+        System.out.println("8. Sắp xếp danh sách phòng theo giá phòng, thứ tự giảm dần");
+        System.out.println("9. Sắp xếp danh sách phòng theo tên phòng, thứ tự tăng dần");
+        System.out.println("10. Sắp xếp danh sách phòng theo tên phòng, thứ tự giảm dần");
         System.out.println("11. Hiển thị danh sách phòng");
         System.out.println("0. Thoát");
     }

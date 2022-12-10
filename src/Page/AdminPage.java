@@ -26,6 +26,7 @@ public class AdminPage {
                 case 1 -> customerManagementMenu.menu();
                 case 2 -> roomManagementMenu.menu();
                 case 3 -> invoiceManagementMenu.menu();
+                default -> System.out.println("Số nhập vào không hợp lệ");
             }
             System.out.println("Bạn có muốn chọn tiếp không? Nhấn số bất kì để tiếp tục chương trình hoặc nhấn số 0 để thoát chương trình");
             input.nextLine();

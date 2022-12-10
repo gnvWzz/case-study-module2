@@ -92,11 +92,9 @@ public class InvoiceManagementMenu {
         do {
             System.out.println("Nhập ID phòng khách hàng đã sử dụng:");
             System.out.println(roomManagement);
-            String roomId = sc.next();
-            sc.nextLine();
+            String roomId = sc.nextLine();
             System.out.println("Nhập số giờ khách hàng đã chơi:");
             long playedTime = sc.nextLong();
-            sc.nextLine();
             invoice.addRoom(roomId, playedTime);
             System.out.print("Khách hàng còn sử dụng phòng nào không? Nhấn số bất kì để chọn tiếp hoặc nhấn số 0 để thoát.");
             choice = sc.nextInt();

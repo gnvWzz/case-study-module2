@@ -74,7 +74,7 @@ public class Invoice {
     public StringBuilder displayProduct() {
         StringBuilder result = new StringBuilder();
         for (String key: roomsList.keySet()) {
-            result.append(roomManagement.searchRoom(key).getId()).append(" ").append(roomManagement.searchRoom(key).getPricePerHour()).append(" x ").append(roomsList.get(key)).append(" = ").append(roomManagement.searchRoom(key).getPricePerHour() * roomsList.get(key)).append("\n");
+            result.append(roomManagement.searchRoom(key).getId()).append("           ").append(roomManagement.searchRoom(key).getPricePerHour()).append("                   ").append(roomsList.get(key)).append("                ").append(roomManagement.searchRoom(key).getPricePerHour() * roomsList.get(key)).append("\n");
         }
         return result;
     }
@@ -110,14 +110,15 @@ public class Invoice {
         return "=====HOÁ ĐƠN DỊCH VỤ=====" + "\n" +
                 "Ngày lập hoá đơn: " + stringGetDate() + "\n" +
                 "ID hoá đơn: " + invoiceId + "\n" +
-                "Tên thành viên: " + customerManagement.searchCustomerById(getCustomerId()).getName() + "\n" +
-                "ID thành viên: " + getCustomerId() + "\n" +
+                "ID khách hàng: " + getCustomerId() + "\n" +
+                "Danh sách phòng đã sử dụng:" + "\n" +
+                "Tên phòng" + " | " + "Đơn giá (theo giờ)" + " | " + " " + "Số giờ đã sử dụng" + " | " + " " + "Tổng tiền phòng" + "\n" +
                 displayProduct() + "\n" +
-                "Tổng tiền: " + totalPrice() + "\n" +
+                "Tổng tiền hoá đơn: " + totalPrice() + "\n" +
                 "===================" + "\n";
     }
 
     public String toFile() {
-        return stringGetDate() + "," + invoiceId + "," + customerManagement.searchCustomerById(customerId).getName() + "," + customerId + "," + StringMap() + "," + totalPrice();
+        return stringGetDate() + "," + invoiceId + "," + customerId + "," + StringMap() + "," + totalPrice();
     }
 }

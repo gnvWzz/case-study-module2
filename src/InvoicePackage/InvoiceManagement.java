@@ -106,11 +106,10 @@ public class InvoiceManagement {
         Invoice invoice;
         String[] ss;
         ss = line.split(",");
-        invoice = new Invoice(simpleDateFormat.parse(ss[0]),ss[1],ss[3]);
-        for (int i = 4; i <= ss.length - 5; i+=6) {
+        invoice = new Invoice(simpleDateFormat.parse(ss[0]),ss[1],ss[2]);
+        for (int i = 3; i <= ss.length - 5; i += 6) {
             invoice.addRoom(ss[i],Long.parseLong(ss[i+3]));
         }
-        invoice.setCustomerName(ss[2]);
         return invoice;
     }
 }

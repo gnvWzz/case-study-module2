@@ -103,7 +103,6 @@ public class CustomerManagement {
                 customers) {
             if (customer.getId().equals(id)) {
                 customer.setPlayMoney(customer.getPlayMoney() + playMoney);
-
             }
         }
         saveToFile();
