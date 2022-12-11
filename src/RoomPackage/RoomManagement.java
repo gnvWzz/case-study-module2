@@ -142,7 +142,11 @@ public class RoomManagement {
         Room room;
         String[] ss;
         ss = line.split(",");
-        room = new Room(ss[0],Long.parseLong(ss[1]),ss[2]);
+        StringBuilder ssDes = new StringBuilder();
+        for (int i = 2; i < ss.length; i++) {
+            ssDes.append(ss[i]);
+        }
+        room = new Room(ss[0],Long.parseLong(ss[1]),ssDes.toString());
         return room;
     }
 }

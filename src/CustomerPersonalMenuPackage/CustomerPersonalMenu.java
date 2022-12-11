@@ -31,7 +31,6 @@ public class CustomerPersonalMenu {
                 default -> System.out.println("Số nhập vào không hợp lệ");
             }
             System.out.println("Bạn có muốn chọn tiếp không? Nhấn số bất kì để tiếp tục chương trình hoặc nhấn số 0 để thoát chương trình");
-            displayMenu();
             choice = sc.nextInt();
         } while (choice != 0);
     }
