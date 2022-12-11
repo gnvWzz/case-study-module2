@@ -110,7 +110,7 @@ public class CustomerPersonalMenu {
             boolean checkPhoneNumber = false;
             while (!checkPhoneNumber) {
                 if (customerManagement.isPhoneNumberExist(newPhoneNumber)) {
-                    System.out.println("Số cmnd/cccd đã trùng. Vui lòng nhập lại.");
+                    System.out.println("Số điện thoại đã trùng. Vui lòng nhập lại.");
                     newPhoneNumber = sc.nextLine();
                 } else {
                     if (!validatePhoneNumber.validate(newPhoneNumber)) {
